@@ -53,7 +53,7 @@ const defaultOptions: KoaSwaggerUiOptions = {
   exposeSpec: false,
   hideTopbar: false,
   favicon: '/favicon.png',
-  customcss: ''
+  customcss: '',
 };
 
 export function koaSwagger(
@@ -89,7 +89,6 @@ export function koaSwagger(
       return conditional ? opt.fn(this) : opt.inverse(this);
     },
   );
-  Handlebars.registerHelper('customCss', ()=> {})
   const index = Handlebars.compile(
     readFileSync(join(__dirname, './index.hbs'), 'utf-8'),
   );
