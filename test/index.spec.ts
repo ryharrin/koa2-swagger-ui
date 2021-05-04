@@ -29,6 +29,11 @@ describe('koa2-swagger-ui', () => {
       .expect('Content-Type', /html/)
       .expect(200);
   });
+  it('should add customCss to html', async () => {
+    await request(app.callback())
+      .get('/custom-css')
+      .expect(/.*#swagger-ui { background-color: red; }.*/)
+  })
   it('should return css', async () => {
     const result = readPkgUpSync({ cwd: __dirname });
     const version = result?.packageJson.devDependencies?.['swagger-ui-dist']!;
