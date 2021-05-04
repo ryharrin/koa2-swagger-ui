@@ -1,6 +1,6 @@
 {
   "name": "koa2-swagger-ui",
-  "version": "0.0.0-placeholder",
+  "version": "5.2.0",
   "description": "Swagger UI middleware for koa",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
